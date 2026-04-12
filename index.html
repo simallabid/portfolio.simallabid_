@@ -2,41 +2,228 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simal Abid Portfolio</title>
+  <title>Simal Abid | UX/UI Designer</title>
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
     body {
-      font-family: sans-serif;
-      padding: 2rem;
-      background: #f4f4f4;
-    }
-    h1 {
+      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
       color: #333;
+      padding: 2rem;
     }
-    ul {
-      line-height: 2;
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeIn 1s ease;
     }
-    a {
-      color: #0077cc;
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: #0077ff;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 0.85rem;
       text-decoration: none;
+      color: #0077ff;
+      font-weight: 500;
+      transition: 0.2s;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .links a:hover {
+      color: #0055cc;
     }
+
+    /* Glow effect */
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle, rgba(0,119,255,0.08), transparent 70%);
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
+
 <body>
-  <h1>Simal Abid Portfolio</h1>
-  <p>Below are my projects made in figma.</p>
-  <ul>
-    <li><a href="https://www.figma.com/design/CTdXwCdHXW1k9OM2v4xr5o/HabitPal?node-id=0-1&t=Vhf6rhr5R2ovhj1G-1" target="_blank">Habit tracking app design (Selected among the best works in my department)</a></li>
-    <li><a href="https://www.figma.com/proto/CTdXwCdHXW1k9OM2v4xr5o/HabitPal?page-id=0%3A1&node-id=1-38&p=f&viewport=599%2C206%2C0.04&t=tVekDtJe9YsFDSns-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A38&show-proto-sidebar=1" target="_blank">Habit tracking app prototype (Selected among the best works in my department)</a></li>
-    <li><a href="https://simallabid.github.io/html/index.html" target="_blank">Sushiman Website (Selected among the best works in my department)</a></li>
-    <li><a href="https://www.figma.com/design/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app?node-id=0-1&t=1VKEJMud9lTGeEYt-1" target="_blank">Coffee ordering app design</a></li>
-    <li><a href="https://www.figma.com/proto/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app?page-id=0%3A1&node-id=0-3&viewport=538%2C323%2C0.17&t=tspYClGgs5J46dWc-1&scaling=scale-down&content-scaling=fixed" target="_blank">Coffee ordering app prototype.</a></li>
-    <li><a href="https://www.figma.com/design/J35sd5EETh6C21rpCHwnc7/ZenFocus?node-id=0-1&t=wZ6Yd8cbujrj7I31-1" target="_blank">ZenFocus</a></li>
-    <li><a href="https://www.figma.com/proto/YRgTNlYa7c2OloAbzj1Dmf/Pizza-hut?page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2&t=ZA1n4FpCoN2GRtiq-1" target="_blank">Pizza hut</a></li>
-    <li><a href="https://www.figma.com/design/lhFpT3Vg2bVrJiCEm7md9w/Untitled?node-id=0-1&t=X7r5tTJR0Fzyppvc-1" target="_blank">Redesign of an app</a></li>
-    <li><a href="https://www.figma.com/design/b7piJfXQQ9YFTvAnxoYkTt/Nike?node-id=2-2&t=HEYrkpGbgqe8MO7j-1 " target="_blank">Nike</a></li>
-  </ul>
+
+  <header>
+    <h1>Simal Abid</h1>
+    <p>UX/UI Designer • Figma • Interactive Experiences</p>
+  </header>
+
+  <section class="grid">
+
+    <div class="card">
+      <span class="tag">Featured</span>
+      <div class="title">HabitPal App</div>
+      <div class="desc">Habit tracking app with a playful, roasting personality. Selected among best works in my department.</div>
+      <div class="links">
+        <a href="https://www.figma.com/design/CTdXwCdHXW1k9OM2v4xr5o/HabitPal" target="_blank">Design</a>
+        <a href="https://www.figma.com/proto/CTdXwCdHXW1k9OM2v4xr5o/HabitPal" target="_blank">Prototype</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Featured</span>
+      <div class="title">Sushiman Website</div>
+      <div class="desc">Interactive sushi-themed website with animations and modern layout. Selected among best works.</div>
+      <div class="links">
+        <a href="https://simallabid.github.io/html/index.html" target="_blank">View Website</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">UI Design</span>
+      <div class="title">Coffee Ordering App</div>
+      <div class="desc">Clean mobile UI focused on smooth ordering experience and visual hierarchy.</div>
+      <div class="links">
+        <a href="https://www.figma.com/design/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app" target="_blank">Design</a>
+        <a href="https://www.figma.com/proto/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app" target="_blank">Prototype</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Concept</span>
+      <div class="title">ZenFocus</div>
+      <div class="desc">Minimal focus app designed to reduce distractions and improve productivity.</div>
+      <div class="links">
+        <a href="https://www.figma.com/design/J35sd5EETh6C21rpCHwnc7/ZenFocus" target="_blank">View</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Prototype</span>
+      <div class="title">Pizza Hut App</div>
+      <div class="desc">Food ordering prototype focusing on fast navigation and user flow.</div>
+      <div class="links">
+        <a href="https://www.figma.com/proto/YRgTNlYa7c2OloAbzj1Dmf/Pizza-hut" target="_blank">View</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Redesign</span>
+      <div class="title">App Redesign</div>
+      <div class="desc">Improved usability and modernized UI for an existing application.</div>
+      <div class="links">
+        <a href="https://www.figma.com/design/lhFpT3Vg2bVrJiCEm7md9w/Untitled" target="_blank">View</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Brand UI</span>
+      <div class="title">Nike UI Concept</div>
+      <div class="desc">Stylized UI concept exploring bold branding and layout structure.</div>
+      <div class="links">
+        <a href="https://www.figma.com/design/b7piJfXQQ9YFTvAnxoYkTt/Nike" target="_blank">View</a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    // subtle tilt effect
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / 20);
+        const rotateY = ((centerX - x) / 20);
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+      });
+    });
+  </script>
+
 </body>
 </html>
