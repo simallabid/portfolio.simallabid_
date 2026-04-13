@@ -13,24 +13,26 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
-      color: #333;
-      padding: 2rem;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e5e7eb;
+      padding: 3rem;
     }
 
     header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       animation: fadeIn 1s ease;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -1px;
     }
 
     header p {
-      color: #666;
+      color: #94a3b8;
+      margin-top: 0.5rem;
       font-size: 1.1rem;
     }
 
@@ -41,66 +43,70 @@
     }
 
     .card {
-      background: white;
-      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
       padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.35s ease;
       cursor: pointer;
       position: relative;
       overflow: hidden;
     }
 
     .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      transform: translateY(-8px) scale(1.02);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
     }
 
     .tag {
       display: inline-block;
-      font-size: 0.75rem;
-      background: #0077ff;
-      color: white;
-      padding: 4px 10px;
+      font-size: 0.7rem;
+      background: rgba(255,255,255,0.1);
+      color: #cbd5f5;
+      padding: 5px 12px;
       border-radius: 999px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
 
     .title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
     }
 
     .desc {
       font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1rem;
+      color: #94a3b8;
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
     }
 
     .links a {
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 12px;
       font-size: 0.85rem;
       text-decoration: none;
-      color: #0077ff;
+      color: #60a5fa;
       font-weight: 500;
       transition: 0.2s;
     }
 
     .links a:hover {
-      color: #0055cc;
+      color: #93c5fd;
     }
 
-    /* Glow effect */
+    /* subtle glow */
     .card::before {
       content: "";
       position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: radial-gradient(circle, rgba(0,119,255,0.08), transparent 70%);
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      background: radial-gradient(circle, rgba(96,165,250,0.15), transparent 70%);
       opacity: 0;
       transition: 0.4s;
     }
@@ -109,7 +115,7 @@
       opacity: 1;
     }
 
-    /* Animations */
+    /* animation */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -136,94 +142,60 @@
     <div class="card">
       <span class="tag">Featured</span>
       <div class="title">HabitPal App</div>
-      <div class="desc">Habit tracking app with a playful, roasting personality. Selected among best works in my department.</div>
+      <div class="desc">A habit tracking app with a bold personality that roasts users. Selected among best works.</div>
       <div class="links">
-        <a href="https://www.figma.com/design/CTdXwCdHXW1k9OM2v4xr5o/HabitPal" target="_blank">Design</a>
-        <a href="https://www.figma.com/proto/CTdXwCdHXW1k9OM2v4xr5o/HabitPal" target="_blank">Prototype</a>
+        <a href="#">Design</a>
+        <a href="#">Prototype</a>
       </div>
     </div>
 
     <div class="card">
       <span class="tag">Featured</span>
       <div class="title">Sushiman Website</div>
-      <div class="desc">Interactive sushi-themed website with animations and modern layout. Selected among best works.</div>
+      <div class="desc">Interactive sushi experience with smooth animations and modern layout.</div>
       <div class="links">
-        <a href="https://simallabid.github.io/html/index.html" target="_blank">View Website</a>
+        <a href="#">View Website</a>
       </div>
     </div>
 
     <div class="card">
       <span class="tag">UI Design</span>
       <div class="title">Coffee Ordering App</div>
-      <div class="desc">Clean mobile UI focused on smooth ordering experience and visual hierarchy.</div>
+      <div class="desc">Mobile UI focused on clarity, speed, and smooth user flow.</div>
       <div class="links">
-        <a href="https://www.figma.com/design/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app" target="_blank">Design</a>
-        <a href="https://www.figma.com/proto/rDpTsW7gAUkt3pGVzgR4QS/Coffee-ordering-app" target="_blank">Prototype</a>
+        <a href="#">Design</a>
+        <a href="#">Prototype</a>
       </div>
     </div>
 
     <div class="card">
       <span class="tag">Concept</span>
       <div class="title">ZenFocus</div>
-      <div class="desc">Minimal focus app designed to reduce distractions and improve productivity.</div>
+      <div class="desc">Minimal productivity app designed to eliminate distractions.</div>
       <div class="links">
-        <a href="https://www.figma.com/design/J35sd5EETh6C21rpCHwnc7/ZenFocus" target="_blank">View</a>
+        <a href="#">View</a>
       </div>
     </div>
 
     <div class="card">
       <span class="tag">Prototype</span>
       <div class="title">Pizza Hut App</div>
-      <div class="desc">Food ordering prototype focusing on fast navigation and user flow.</div>
+      <div class="desc">Fast ordering experience with optimized navigation flows.</div>
       <div class="links">
-        <a href="https://www.figma.com/proto/YRgTNlYa7c2OloAbzj1Dmf/Pizza-hut" target="_blank">View</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">Redesign</span>
-      <div class="title">App Redesign</div>
-      <div class="desc">Improved usability and modernized UI for an existing application.</div>
-      <div class="links">
-        <a href="https://www.figma.com/design/lhFpT3Vg2bVrJiCEm7md9w/Untitled" target="_blank">View</a>
+        <a href="#">View</a>
       </div>
     </div>
 
     <div class="card">
       <span class="tag">Brand UI</span>
       <div class="title">Nike UI Concept</div>
-      <div class="desc">Stylized UI concept exploring bold branding and layout structure.</div>
+      <div class="desc">Bold interface exploring strong branding and layout rhythm.</div>
       <div class="links">
-        <a href="https://www.figma.com/design/b7piJfXQQ9YFTvAnxoYkTt/Nike" target="_blank">View</a>
+        <a href="#">View</a>
       </div>
     </div>
 
   </section>
-
-  <script>
-    // subtle tilt effect
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-      card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / 20);
-        const rotateY = ((centerX - x) / 20);
-
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-      });
-
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
-      });
-    });
-  </script>
 
 </body>
 </html>
